@@ -10,8 +10,10 @@ while True:
     try:
         led.off()
         sleep(1)
-        out = str(float(ser.readline().decode("utf-8").strip()))
-        print("Temp: " + out + "C")
+        temp = str(float(ser.readline().decode("utf-8").strip()))
+        print("Temp: " + temp + "C")
+        humidity = str(float(ser.readline().decode("utf-8").strip()))
+        print("Humidity: " + humidity + "%")
     except:
         led.on()
         sleep(2)
