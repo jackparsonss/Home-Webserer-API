@@ -4,7 +4,7 @@ from gpiozero import LED
 
 led = LED(2)
 
-ser = serial.Serial('/dev/tty/ACM0', 9600, timeout=5)
+ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
 
 while True:
     try:
