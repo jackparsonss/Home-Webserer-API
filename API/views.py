@@ -6,7 +6,7 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-    return "<h1>Hello World</h1>"
+    return "<h1>This Detects the Temperature and Humidity of my Room</h1>"
 
 
 class Sensor(Resource):
