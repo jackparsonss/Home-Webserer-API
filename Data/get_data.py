@@ -10,8 +10,7 @@ def get_data():
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
     try:
         data = {}
-        led.off()
-        sleep(1)
+        led.on()
         temp = str(float(ser.readline().decode("utf-8").strip()))
         #print("Temp: " + temp + "C")
         humidity = str(float(ser.readline().decode("utf-8").strip()))
@@ -26,6 +25,5 @@ def get_data():
         return data
     except Exception as ex:
         print(ex)
-        led.on()
-        sleep(2)
+        led.off()
     
