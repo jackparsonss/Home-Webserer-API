@@ -4,10 +4,8 @@ from gpiozero import LED
 from datetime import datetime
 import json
 
-led = LED(2)
-ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
 
-def get_temp_data():
+def get_data():
     led = LED(2)
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
     try:
