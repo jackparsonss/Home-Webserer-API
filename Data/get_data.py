@@ -24,7 +24,6 @@ def get_data():
             "Humidity" : humidity
         }
         data_set = json.dumps(data)
-        print(json.loads(data_set))
         return data_set
     except Exception as ex:
         print(ex)
