@@ -7,4 +7,6 @@ def create_app():
 
     from .views import Sensor
 
+    api.add_resource(Sensor, '/api/get-data')
+
     return app
