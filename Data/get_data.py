@@ -7,7 +7,7 @@ import json
 led = LED(2)
 ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
 
-def get_data():
+def get_temp_data():
     led = LED(2)
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
     try:
@@ -25,7 +25,8 @@ def get_data():
         }
         data_set = json.dumps(data)
         print(json.loads(data_set))
-        return data_set
+        ser.close()
+        return data
     except Exception as ex:
         print(ex)
         led.on()
