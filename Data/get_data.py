@@ -8,8 +8,8 @@ import json
 def get_data():
     led = LED(2)
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
+    data = {}
     try:
-        data = {}
         temp = str(float(ser.readline().decode("utf-8").strip()))
         #print("Temp: " + temp + "C")
         humidity = str(float(ser.readline().decode("utf-8").strip()))
@@ -19,7 +19,6 @@ def get_data():
             "Temperature" : temp,
             "Humidity" : humidity
         }
-        data_set = json.dumps(data)
         ser.close()
         return data
     except Exception as ex:
