@@ -24,7 +24,6 @@ def get_temp_data():
             "Humidity" : humidity
         }
         data_set = json.dumps(data)
-        print(json.loads(data_set))
         ser.close()
         return data
     except Exception as ex:

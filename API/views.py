@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_restful import Resource
-from Data import get_temp_data
+from Data.get_data import get_data
 
 views = Blueprint('views', __name__)
 
@@ -12,5 +12,4 @@ def home():
 class Sensor(Resource):
     def get(self):
         data = get_data()
-        #data = {}
         return data
