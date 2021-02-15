@@ -38,7 +38,7 @@
 
     <script
       type="text/javascript"
-      src="{% static "index.js" %}" 
+      src="{{ url_for('static', filename='index.js') }}" 
     ></script>
   </body>
 </html>
