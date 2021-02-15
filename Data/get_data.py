@@ -7,7 +7,9 @@ import json
 led = LED(2)
 ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
 
-while True:
+def get_data():
+    led = LED(2)
+    ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
     try:
         data = {}
         led.off()
@@ -23,7 +25,9 @@ while True:
         }
         data_set = json.dumps(data)
         print(json.loads(data_set))
+        return data_set
     except Exception as ex:
         print(ex)
         led.on()
         sleep(2)
+    
