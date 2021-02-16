@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from flask_restful import Resource
-from Data.get_data import get_data
+from Website.Data.get_data import get_data
 
 views = Blueprint('views', __name__)
 
