@@ -1,9 +1,25 @@
 {% extends "index.html" %} {% block title %}Fetch{% endblock %}
 {% block content %}
-<nav class="navbar navbar-dark bg-dark">
-	<!-- Navbar content -->
-</nav>
-<div id="data" class="container-md" align="center">
+<div id="navbar" class="container" align="center">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-toggle="collapse"
+			data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+	  <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link">Temperature Humidity Sensor</a>
+          <a class="nav-item nav-link">LED Testing</a>
+        </div>
+      </div>
+	</nav>
+</div>
+
+
+<div id="data" class="container" align="center">
 	<h1>Press To Fetch Current Temperature and Humidity Levels</h1>
 	<button type="button" class="btn btn-primary btn-lg" onClick="getData()">
     	Fetch
@@ -12,7 +28,7 @@
 <br />
 <br />
 <br />
-<div id="LED" class="container-md" align="center">
+<div id="LED" class="container" align="center">
 	<h1>Press To Turn On And Off LED Light</h1>
 	<button type="button" class="btn btn-primary btn-lg" onClick="LEDOn()">
     	On
