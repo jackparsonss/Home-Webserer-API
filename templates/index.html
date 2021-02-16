@@ -19,9 +19,7 @@
   </head>
   <body>
     <h1>This is my app</h1>
-    <button type="button" class="btn btn-primary" onClick="getData()">
-	    Fetch
-    </button>
+    
     
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -43,5 +41,9 @@
       type="text/javascript"
       src="{{ url_for('static', filename='index.js') }}" 
     ></script>
+
+    <button type="button" class="btn btn-primary" onClick="getData()">
+	    Fetch
+    </button>
   </body>
 </html>
