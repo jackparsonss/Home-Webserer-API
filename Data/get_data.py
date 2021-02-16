@@ -1,12 +1,10 @@
 import serial
 from time import sleep
-from gpiozero import LED
 from datetime import datetime
 import json
 
 
 def get_data():
-    led = LED(2)
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
     data = {}
     try:
@@ -23,5 +21,4 @@ def get_data():
         return data
     except Exception as ex:
         print(ex)
-        led.on()
     
