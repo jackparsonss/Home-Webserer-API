@@ -1,11 +1,17 @@
 {% extends "index.html" %} {% block title %}Fetch{% endblock %}
 {% block content %}
+<nav class="navbar navbar-dark bg-dark">
+	<!-- Navbar content -->
+</nav>
 <div id="data" class="container-md" align="center">
 	<h1>Press To Fetch Current Temperature and Humidity Levels</h1>
 	<button type="button" class="btn btn-primary btn-lg" onClick="getData()">
     	Fetch
 	</button>
 </div>
+<br />
+<br />
+<br />
 <div id="LED" class="container-md" align="center">
 	<h1>Press To Turn On And Off LED Light</h1>
 	<button type="button" class="btn btn-primary btn-lg" onClick="LEDOn()">
