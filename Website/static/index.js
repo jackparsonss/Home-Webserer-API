@@ -8,4 +8,11 @@ function getData(){
       div.innerHTML = 'Temperature: ' + data[time].Temperature + 'C <br/> Humidity ' + data[time].Humidity + "%";
       dataDocument.appendChild(div);
     });
-  }
+}
+
+function LEDOn(){
+  console.log("LED Is On")  
+}
+function LEDOff(){
+  console.log("LED Is Off")
+}
