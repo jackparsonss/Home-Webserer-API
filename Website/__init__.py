@@ -3,10 +3,10 @@ from flask_restful import Api
 
 
 def create_app():
-    app = Flask(__name__, template_folder="../templates")
+    app = Flask(__name__, template_folder="../Website/templates")
     api = Api(app)
 
-    from API.views import Sensor, views
+    from .API.views import Sensor, views
 
     app.register_blueprint(views, url_prefix='/')
 
