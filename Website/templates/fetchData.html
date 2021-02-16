@@ -1,42 +1,41 @@
 {% extends "index.html" %} {% block title %}Fetch{% endblock %}
 {% block content %}
-<style>
-<div class="container-xl">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-toggle="collapse"
-			data-target="#navbar">
-		<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbar">
-		<div class="navbar-nav">
-			<a class="nav-item nav-link">Temperature Humidity Sensor</a>
-			<a class="nav-item nav-link">LED Testing</a>
-		</div>
-		</div>
-	</nav>
-	
-	
-	
-	<div id="data" class="container" align="center">
-		<h1>Press To Fetch Current Temperature and Humidity Levels</h1>
-		<button type="button" class="btn btn-primary btn-lg" onClick="getData()">
-			Fetch
-		</button>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<button
+		class="navbar-toggler"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbar">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbar">
+	<div class="navbar-nav">
+		<a class="nav-item nav-link">Temperature Humidity Sensor</a>
+		<a class="nav-item nav-link">LED Testing</a>
 	</div>
-	<br />
-	<br />
-	<br />
-	<div id="LED" class="container" align="center">
-		<h1>Press To Turn On And Off LED Light</h1>
-		<button type="button" class="btn btn-primary btn-lg" onClick="LEDOn()">
-			On
-		</button>
-		<button type="button" class="btn btn-primary btn-lg" onClick="LEDOff()">
-			Off
-		</button>
 	</div>
+</nav>
+
+
+
+<div id="data" class="container" align="center">
+	<h1>Press To Fetch Current Temperature and Humidity Levels</h1>
+	<button type="button" class="btn btn-primary btn-lg" onClick="getData()">
+		Fetch
+	</button>
 </div>
+<br />
+<br />
+<br />
+<div id="LED" class="container" align="center">
+	<h1>Press To Turn On And Off LED Light</h1>
+	<button type="button" class="btn btn-primary btn-lg" onClick="LEDOn()">
+		On
+	</button>
+	<button type="button" class="btn btn-primary btn-lg" onClick="LEDOff()">
+		Off
+	</button>
+</div>
+
 {% endblock %}
