@@ -40,5 +40,19 @@
       src="{{ url_for('static', filename='index.js') }}" 
     ></script>
 
+    <script>
+      function getData(){
+        fetch('/api/get-data')
+        .then(response => response.json())
+        .then(data => console.log(data));
+      }
+    </script>
+
+    <div align="center">
+      <h1>Press To Fetch Current Temperature and Humidity Levels</h1>
+      <button type="button" class="btn btn-primary btn-lg" onClick="getData()">
+          Fetch
+      </button>
+    </div>
   </body>
 </html>
