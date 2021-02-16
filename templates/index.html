@@ -42,15 +42,20 @@
 
     <script>
       function getData(){
+        var dataDocument = document.getElementById("myData");
         fetch('/api/get-data')
         .then(response => response.json())
         .then(data => {
-          return (`<p>${data}</p>`)
+          time = Object.keys(data)
+          var div = document.createElement("div");
+          div.innerHTML = 'Temperature: ' + data[time].Temperature + 'Humidity ' + data[time].Humidity;
+          dataDocument.appendChild(div);
+          
         });
       }
     </script>
 
-    <div align="center">
+    <div id="data" align="center">
       <h1>Press To Fetch Current Temperature and Humidity Levels</h1>
       <button type="button" class="btn btn-primary btn-lg" onClick="getData()">
           Fetch
