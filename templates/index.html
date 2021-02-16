@@ -37,7 +37,7 @@
 
     <script
       type="text/javascript"
-      src="{{ url_for('static', filename='index.js') }}" 
+      src="/static/index.js" 
     ></script>
 
     <script>
@@ -48,10 +48,9 @@
         .then(data => {
 	  console.log(data);
           time = Object.keys(data)
-          var div = document.createElement("div");
-          div.innerHTML = 'Temperature: ' + data[time].Temperature + 'Humidity ' + data[time].Humidity;
+          var div = document.createElement("h3");
+          div.innerHTML = 'Temperature: ' + data[time].Temperature + '\nHumidity ' + data[time].Humidity;
           dataDocument.appendChild(div);
-          
         });
       }
     </script>
