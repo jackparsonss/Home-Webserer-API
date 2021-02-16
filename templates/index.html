@@ -42,10 +42,11 @@
 
     <script>
       function getData(){
-        var dataDocument = document.getElementById("myData");
+        var dataDocument = document.getElementById("data");
         fetch('/api/get-data')
         .then(response => response.json())
         .then(data => {
+	  console.log(data);
           time = Object.keys(data)
           var div = document.createElement("div");
           div.innerHTML = 'Temperature: ' + data[time].Temperature + 'Humidity ' + data[time].Humidity;
