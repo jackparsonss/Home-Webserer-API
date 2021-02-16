@@ -6,7 +6,7 @@ def create_app():
     app = Flask(__name__, template_folder="../templates")
     api = Api(app)
 
-    from .views import Sensor, views
+    from API.views import Sensor, views
 
     app.register_blueprint(views, url_prefix='/')
 
