@@ -1,0 +1,13 @@
+{% extends "index.html" %} {% block title %}Fetch{% endblock %}
+{% block content %}
+<div id="LED" class="container" align="center">
+	<h1>Press To Turn On And Off LED Light</h1>
+	<button type="button" class="btn btn-primary btn-lg" onClick="LEDOn()">
+		On
+	</button>
+	<button type="button" class="btn btn-primary btn-lg" onClick="LEDOff()">
+		Off
+	</button>
+</div>
+
+{% endblock %}

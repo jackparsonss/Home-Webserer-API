@@ -8,8 +8,16 @@ views = Blueprint('views', __name__)
 def home():
     return render_template("fetchData.html")
 
+@views.route('/LED')
+def LED():
+    return render_template("toggleLED.html")
+
 
 class Sensor(Resource):
     def get(self):
         data = get_data()
         return data
+
+class LEDToggle(Resource):
+    def post(self):
+        pass
