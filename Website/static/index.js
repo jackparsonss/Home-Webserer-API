@@ -11,8 +11,8 @@ function getData(){
 }
 
 function LEDOn(){
-  console.log("LED Is On")  
+  fetch('/api/led-on');
 }
 function LEDOff(){
-  console.log("LED Is Off")
+  fetch('/api/led-off');
 }

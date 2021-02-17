@@ -1,8 +1,12 @@
 import serial
 from time import sleep
 from datetime import datetime
+import RPi.GPIO as GPIO
 import json
 
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(18, GPIO.OUT)
 
 def get_data():
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout=5)
@@ -21,4 +25,16 @@ def get_data():
         return data
     except Exception as ex:
         print(ex)
+
+def toggle_led(state):
+    if state == 'on':
+        GPIO.output(18, GPIO.HIGH)
+    elif state == 'off':
+        GPIO.output(18, GPIO.LOW)
+    else:
+        abort(400, message="did not enter on or off...")
+    return {'LED': state}, 200
+
+
+
     
