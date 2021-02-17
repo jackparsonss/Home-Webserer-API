@@ -37,7 +37,7 @@ void setup() {
 }
 
 void loop() {
-  delay(1000);
+  delay(250);
   temp = HT.readTemperature();
   Serial.println(temp);
   humidity=HT.readHumidity();

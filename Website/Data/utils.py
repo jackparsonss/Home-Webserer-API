@@ -1,5 +1,4 @@
 import serial
-from time import sleep
 from datetime import datetime
 import RPi.GPIO as GPIO
 import json
@@ -13,9 +12,7 @@ def get_data():
     data = {}
     try:
         temp = str(float(ser.readline().decode("utf-8").strip()))
-        #print("Temp: " + temp + "C")
         humidity = str(float(ser.readline().decode("utf-8").strip()))
-        #print("Humidity: " + humidity + "%")
         time = datetime.now()
         data[str(time)[:-7]] = {
             "Temperature" : temp,
